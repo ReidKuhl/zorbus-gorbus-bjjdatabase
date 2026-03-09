@@ -47,10 +47,12 @@ As a BJJ practitioner, I want to search and filter a library of techniques by ca
 ## Design Inspiration
 
 ![Liked how the only thing viewable in the login page was the login window itself.](/assets/login-inspo.png)
+
 I liked how the only thing viewable in the login page was the login window itself.
 - Design Inspiration: [SCS](https://account.speedcubeshop.com/authentication/login?client_id=22d6852a-023e-410e-ae94-b81b8aaa5191&locale=en&redirect_uri=%2Fauthentication%2Foauth%2Fauthorize%3Fclient_id%3D22d6852a-023e-410e-ae94-b81b8aaa5191%26locale%3Den%26nonce%3D2c6f225d-2570-4d20-b576-a979fb85a597%26redirect_uri%3Dhttps%253A%252F%252Faccount.speedcubeshop.com%252Fcallback%26region_country%3DUS%26response_type%3Dcode%26scope%3Dopenid%2Bemail%2Bcustomer-account-api%253Afull%26state%3DhWN9eteyxdBU7dQzVIrFDD3i&region_country=US) 
 
 ![I liked this color scheme. It is simple and easy on the eyes.](/assets/color-inspo.png)
+
 I liked this color scheme. It is simple and easy on the eyes.
 - Color Inspiration: [HookAgency](https://hookagency.com/blog/luxury-website-colors/)
 ---
