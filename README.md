@@ -13,11 +13,9 @@
 
 ---
 
-> *"Every roll starts with a move."*
+> *"Every roll starts with a move. Know your moves."*
 
-## What is this?
-
-A front-end jiujitsu move database for grapplers at my gym. Search, filter, and study techniques — submissions, sweeps, guard passes, escapes, and takedowns — each with an embedded YouTube instructional video and a link to a written reference article.
+## User Story
 
 As a BJJ practitioner, I want to search and filter a library of techniques by category and difficulty so I can quickly find instructionals to study between training sessions.
 
@@ -47,8 +45,12 @@ As a BJJ practitioner, I want to search and filter a library of techniques by ca
 ---
 
 ## Design Inspiration
-![alt text](image.png)
 
+![Liked how the only thing viewable in the login page was the login window itself.](/assets/login-inspo.png)
+- Design Inspiration: [SCS](https://account.speedcubeshop.com/authentication/login?client_id=22d6852a-023e-410e-ae94-b81b8aaa5191&locale=en&redirect_uri=%2Fauthentication%2Foauth%2Fauthorize%3Fclient_id%3D22d6852a-023e-410e-ae94-b81b8aaa5191%26locale%3Den%26nonce%3D2c6f225d-2570-4d20-b576-a979fb85a597%26redirect_uri%3Dhttps%253A%252F%252Faccount.speedcubeshop.com%252Fcallback%26region_country%3DUS%26response_type%3Dcode%26scope%3Dopenid%2Bemail%2Bcustomer-account-api%253Afull%26state%3DhWN9eteyxdBU7dQzVIrFDD3i&region_country=US) 
+
+![I liked this color scheme. It is simple and easy on the eyes.](/assets/color-inspo.png)
+- Color Inspiration: [HookAgency](https://hookagency.com/blog/luxury-website-colors/)
 ---
 
 ## Code Highlight
@@ -94,3 +96,7 @@ function getFilteredMoves() {
     ├── main.css            
     └── login-style.css     
 ```
+
+## Verification
+
+Tested on my personal mobile device. Known issues include some difficulties getting buttons at the links to move references. Also things are too close to the edges of the screen.
