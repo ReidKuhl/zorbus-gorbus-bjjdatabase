@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BJJ DB | Sign In</title>
+  <link rel="stylesheet" href="../styles/login-style.css">
+</head>
+<body>
+
+  <div class="login-page">
+    <div class="login-bg-text">BJJ</div>
+
+    <div class="login-card">
+      <h1>Jiujitsu <em>Database</em></h1>
+      <p class="login-sub">Sign in to access this jiujitsu move database</p>
+
+      <div class="form-field">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="your username" autocomplete="username" />
+      </div>
+
+      <div class="form-field">
+        <label for="password">Password</label>
+        <div class="password-wrap">
+          <input type="password" id="password" placeholder="password" autocomplete="current-password" />
+          <button class="toggle-pw" id="togglePw" aria-label="Toggle password visibility">
+            <i class="bi bi-eye-slash" id="eyeIcon"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="login-error"></div>
+
+      <button class="btn-primary-full" id="login-button">Sign In</button>
+    </div>
+  </div>
+
+  <script src="../scripts/login-script.js"></script>
+</body>
+</html>
