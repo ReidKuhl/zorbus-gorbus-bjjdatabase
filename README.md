@@ -1,0 +1,96 @@
+# Jiujitsu Database
+
+## Authorship & Attribution
+- CIS 376 — Spring 2026 | Reid Kuhlers
+
+- Technique descriptions: original writing informed by personal BJJ training
+- Video links: YouTube (BJJ Fanatics, Stephan Kesting, various)
+- Article links: [BJJ Heroes](https://bjjheroes.com), [Grappling Insider](https://grapplinginsider.com), [BJJ Fanatics Blog](https://bjjfanatics.com/blogs/news)
+- CSS framework: [Bootstrap 5](https://getbootstrap.com)
+- Icons: [Bootstrap Icons](https://icons.getbootstrap.com)
+- Fonts: [Bebas Neue](https://fonts.google.com/specimen/Bebas+Neue), [DM Sans](https://fonts.google.com/specimen/DM+Sans), [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) via Google Fonts
+- General Reference: [W3Schools](https://www.w3schools.com)
+
+---
+
+> *"Every roll starts with a move."*
+
+## What is this?
+
+A front-end jiujitsu move database for grapplers at my gym. Search, filter, and study techniques — submissions, sweeps, guard passes, escapes, and takedowns — each with an embedded YouTube instructional video and a link to a written reference article.
+
+As a BJJ practitioner, I want to search and filter a library of techniques by category and difficulty so I can quickly find instructionals to study between training sessions.
+
+---
+
+## Live App
+
+🔗 **[Deployed App →]()**
+🔗 **[GitHub Repo →](https://github.com/ReidKuhl/zorbus-gorbus-bjjdatabase)**
+
+> Tested on desktop Chrome + Firefox and mobile (iOS Safari). Login with `reid` / `lasagna`.
+
+---
+
+## Features
+
+- **Login / Sign-out** with session storage and front-end password check
+- **Search** across move name, description, category, tags, and position
+- **Filter by category** (submissions, sweeps, passes, escapes, takedowns)
+- **Filter by difficulty** (beginner / intermediate / advanced)
+- **Sort** alphabetically or by difficulty
+- **Modal** with embedded YouTube video + article link for each move
+- **Session page** to view and clear stored session data
+
+---
+
+---
+
+## Design Inspiration
+![alt text](image.png)
+
+---
+
+## Code Highlight
+
+```javascript
+// Multi-field search across an object array
+const SEARCHABLE_FIELDS = ["name", "category", "description", "tags", "position"];
+
+function getFilteredMoves() {
+  const q = searchQuery.toLowerCase();
+
+  return bjjMoves.filter(move =>
+    SEARCHABLE_FIELDS.some(field => {
+      const val = Array.isArray(move[field])
+        ? move[field].join(" ")       // flatten tag arrays to string
+        : String(move[field] || "");
+      return val.toLowerCase().includes(q);
+    })
+  );
+}
+```
+
+**How it works:** When the user types in the search input, an `input` event fires and updates `searchQuery` in state. `getFilteredMoves()` then loops over the `bjjMoves` data array and checks whether any of the defined searchable fields contain the query string — including flattening tag arrays into a single string for comparison. Matching moves are passed to `renderMoves()`, which clears the DOM grid and re-injects a card element for each result. Category and difficulty filter buttons update their own state variables and call the same pipeline, so all three filters compose together on every render.
+
+---
+
+## Folder Structure
+
+```
+/
+├── index.html             
+├── assets/
+│   └── data/
+│       └── data.js       
+├── pages/
+│   ├── login.html          
+│   └── session.html        
+├── scripts/
+│   ├── login-script.js     
+│   ├── search.js           
+│   └── session.js          
+└── styles/
+    ├── main.css            
+    └── login-style.css     
+```
