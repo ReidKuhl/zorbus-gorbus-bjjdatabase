@@ -23,7 +23,7 @@ As a BJJ practitioner, I want to search and filter a library of techniques by ca
 
 ## Live App
 
-🔗 **[Deployed App →]()**
+🔗 **[Deployed App →](https://reidkuhl.github.io/zorbus-gorbus-bjjdatabase/pages/login-page.html)**
 🔗 **[GitHub Repo →](https://github.com/ReidKuhl/zorbus-gorbus-bjjdatabase)**
 
 > Tested on desktop Chrome + Firefox and mobile (iOS Safari). Login with `reid` / `lasagna`.
@@ -39,8 +39,6 @@ As a BJJ practitioner, I want to search and filter a library of techniques by ca
 - **Sort** alphabetically or by difficulty
 - **Modal** with embedded YouTube video + article link for each move
 - **Session page** to view and clear stored session data
-
----
 
 ---
 
